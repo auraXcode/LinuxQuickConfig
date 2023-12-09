@@ -1,9 +1,11 @@
 import subprocess
 import os
 
+requirement_file = "PYrequirment.txt"
 def install_software(software_name):
     try:
         subprocess.run(["sudo", "apt", "install", software_name], check=True)
+        subprocess.run(['pip', 'install', '-r',requirement_file])
         print(f"Successfully installed {software_name}")
     except subprocess.CalledProcessError as e:
         print(f"Failed to install {software_name}. Error: {e}")
@@ -21,7 +23,3 @@ install_software("firefox")
 
 # 2. Open Download Page
 open_download_page("https://www.mozilla.org/en-US/firefox/new/")
-
-# 3. Extract Archive and Move
-archive_path = "path/to/your/archive.tar.gz"
-destination_path = "path/to/your/destination/folder"
