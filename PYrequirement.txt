@@ -1,5 +1,6 @@
 # list of all python libraries
 numpy
-opencv-python
 matplotlib
 tkinter
+
+
