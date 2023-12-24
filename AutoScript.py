@@ -52,3 +52,6 @@ install_package(software_list)
 This script installs and configures various software packages
  on a Linux system.
 """
+""" things to be updated...
+packages_snap = ["nvim --classic","postman"]
+"""
