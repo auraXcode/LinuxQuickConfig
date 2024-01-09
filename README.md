@@ -6,4 +6,4 @@ It covers
 - installation
 - software/package/library setup
 - terminal configuration
-- aesthetic enhancements like themes, icons, and fonts.
+- aesthetic enhancements like themes, icons, plank and fonts.
