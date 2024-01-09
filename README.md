@@ -16,5 +16,5 @@ Configration file `src/font.sh`
 
 ## Initiate setup
 ```python
-main.py
+python3 main.py
 ```
