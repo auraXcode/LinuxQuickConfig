@@ -9,7 +9,7 @@ It covers
 - aesthetic enhancements like themes, icons, plank and fonts.
 
 ## Fonts
-configration file`font.sh`
+Configration file `src/font.sh`
 1. Hack
 2. FireCode
 3. JetBrainMono
