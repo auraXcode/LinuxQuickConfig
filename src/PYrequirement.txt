@@ -2,5 +2,5 @@
 numpy
 matplotlib
 tkinter
-
+PyQt5
 

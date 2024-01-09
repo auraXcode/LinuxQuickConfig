@@ -1,14 +1,15 @@
 import subprocess
 
 # Install Python dependencies from requirements file
-requirement_file = "PYrequirement.txt"
-subprocess.run(['pip', 'install', '-r', requirement_file])
+# requirement_file = "PYrequirement.txt"
+# subprocess.run(['pip', 'install', '-r', requirement_file])
 
 
-def is_installed(software_name):
+def isInstalledOrNot(checkPackages):
     try:
-        subprocess.run(["which", software_name], check=True,
+        subprocess.run(["which", checkPackages], check=True, 
                        stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(subprocess.run(["which", checkPackages]))
         return True
     except subprocess.CalledProcessError:
         return False
@@ -17,12 +18,13 @@ def is_installed(software_name):
 def install_package(software_list):
     try:
         for software_name in software_list:
+            x = subprocess.run('which', software_name)
+            print(x)
             # Check if the software is already installed
-            if not is_installed(software_name):
+            if not isInstalledOrNot(software_name):
                 subprocess.run(["sudo", "apt", "install", software_name],
                                check=True)
                 print(f"Installed {software_name}")
-
                 # Print the version if available
                 subprocess.run([software_name, "--version"])
     except subprocess.CalledProcessError as e:
@@ -42,16 +44,18 @@ software_url = ["https://www.mozilla.org/en-US/firefox/new/",
                 "https://github.com/VSCodium/vscodium"]
 
 # List of software to install
-software_list = ['git', "nodejs", "kazam", "flameshot", "npm", "conda", "snap",
-                 "snapd"]
+software_list = ['git', "nodejs", "kazam", "flameshot", "npm", "snap",
+                    "cargo", "rustup"]
 
+
+packages_snaps = ["nvim --classic", "postman"]
 # Install the specified software
-install_package(software_list)
-
+pm = input("Package manager: ").lower()
+if pm == "apt":
+    install_package(software_list)
+elif pm == "snap":
+    install_package(packages_snaps)
 """
 This script installs and configures various software packages
  on a Linux system.
-"""
-""" things to be updated...
-packages_snap = ["nvim --classic","postman"]
 """
