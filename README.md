@@ -1,6 +1,6 @@
-## LinuxRapidConfig
+## LinuxRapidConfig 🚀 workflow 😎🔥
 > LinuxRapidConfig: Streamlines the setup process for Linux system.
-> 🚀 workflow😎🔥
+> 
 
 It covers 
 - installation
