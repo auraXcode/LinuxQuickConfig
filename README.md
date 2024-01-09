@@ -1,6 +1,7 @@
 ## LinuxRapidConfig
-> A quick and efficient setup that aligns with your workflow.
-LinuxRapidConfig streamlines the setup process for your Linux system.
+> LinuxRapidConfig: streamlines the setup process for Linux system.
+> 🚀 workflow😎🔥 
+
 It covers 
 - installation
 - software/package/library setup
