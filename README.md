@@ -25,7 +25,7 @@ Configration file `src/font.sh`
 Configration file `src/browser.sh`
 
 ## Nvim
-git@github.com:auraXcode/dotfiles.git
+[NvChad](https://github.com/auraXcode/dotfiles.git)
 ## Terminal Customization
 **Auto setup run** `CustomZsh.sh`
 ### Manual
