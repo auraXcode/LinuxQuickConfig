@@ -44,3 +44,4 @@ elif package_manager == "pacman":
     install_packages("pacman", pacman_packages)
 else:
     print("Invalid package manager choice")
+    
