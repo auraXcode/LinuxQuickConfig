@@ -25,14 +25,14 @@ def open_download_page(software_url):
     except subprocess.CalledProcessError as e:
         print(f"Failed to open download page. Error: {e}")
 
-# List of software to install
-# software_list = ['git', 'nodejs', 'flameshot', 'npm']
+List of software to install
+software_list = ['git', 'nodejs', 'flameshot', 'npm']
 
 # List of packages for pacman
 pacman_packages = ["git", "nodejs", "flameshot", "npm"]
 
-# List of packages for apt
-apt_packages = ["git", "nodejs", "flameshot", "npm"]
+# # List of packages for apt
+# apt_packages = ["git", "nodejs", "flameshot", "npm"]
 
 # Ask user for package manager choice
 package_manager = input("Choose package manager (apt or pacman): ").lower()
