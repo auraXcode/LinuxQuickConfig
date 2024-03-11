@@ -1,6 +1,0 @@
-# list of all python libraries
-numpy
-matplotlib
-tkinter
-PyQt5
-
