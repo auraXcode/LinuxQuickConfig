@@ -44,8 +44,7 @@ software_url = ["https://www.mozilla.org/en-US/firefox/new/",
                 "https://github.com/VSCodium/vscodium"]
 
 # List of software to install
-software_list = ['git', "nodejs", "kazam", "flameshot", "npm", "snap",
-                    "cargo", "rustup"]
+software_list = ['git', "nodejs", "kazam", "flameshot", "npm", "kdenlive"]
 
 
 packages_snaps = ["nvim --classic", "postman"]
