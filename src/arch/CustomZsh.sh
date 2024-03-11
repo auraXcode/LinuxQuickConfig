@@ -1,3 +1,4 @@
+#customzsh
 #!/bin/bash
 
 # Function to check if a command is available
@@ -7,7 +8,7 @@ command_exists() {
 
 # Install Zsh
 if ! command_exists zsh; then
-  sudo apt-get install zsh
+  sudo pacman -S zsh
 fi
 
 # Install Oh My Zsh
@@ -30,3 +31,5 @@ fi
 if [ "$SHELL" != "$(command -v zsh)" ]; then
   chsh -s "$(command -v zsh)"
 fi
+
+
