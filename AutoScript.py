@@ -25,7 +25,7 @@ def open_download_page(software_url):
     except subprocess.CalledProcessError as e:
         print(f"Failed to open download page. Error: {e}")
 
-List of software to install
+# List of software to install
 software_list = ['git', 'nodejs', 'flameshot', 'npm']
 
 # List of packages for pacman
@@ -39,7 +39,7 @@ package_manager = input("Choose package manager (apt or pacman): ").lower()
 
 # Install the specified software
 if package_manager == "apt":
-    install_packages("apt", apt_packages)
+    install_packages("apt", software_list)
 elif package_manager == "pacman":
     install_packages("pacman", pacman_packages)
 else:

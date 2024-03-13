@@ -24,6 +24,9 @@ def execute_distribution_scripts(distribution):
     else:
         print(f"Error: Custom Zsh script not found for {distribution} distribution.")
 
+
+
+
 def main():
     # Get the distribution name
     distribution = platform.platform()
@@ -33,6 +36,13 @@ def main():
         execute_distribution_scripts("ubuntu")
     else:
         print("Error: Unsupported distribution.")
+    
+    ask = input("Do you want more memory [y/n]: ").lower()
+    if ask == "y":
+        print("Keep in mind, \nEnter size in MB\n If it's looks like nothing change reffer {swapMemory.sh}")
+        subprocess.run(["bash", "./src/swapMemory.sh"], text=True)
+    else:
+        print("\n\t\t\tAre you rich!")
 
 if __name__ == "__main__":
     main()
