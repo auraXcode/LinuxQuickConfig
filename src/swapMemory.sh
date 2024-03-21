@@ -2,32 +2,34 @@
 
 # Check if the script is run with superuser privileges
 if [[ $(id -u) -ne 0 ]]; then
-    echo "Please run this script as root or using sudo."
-    exit 1
+    echo "Please enter the password to run this script with sudo privileges:"
+    if sudo -v; then
+        echo "Running with sudo privileges..."
+    else
+        echo "Failed to obtain sudo privileges. Exiting."
+        exit 1
+    fi
 fi
+
 
 echo "Please enter the size of the new swap file in MB:"
 read size
 
-# Safety check: Ensure size is provided and is a number
 if ! [[ $size =~ ^[0-9]+$ ]]; then
     echo "Invalid input. Please enter a valid size in MB."
     exit 1
 fi
 
-# Safety check: Turn off the old swap if it exists
 if grep -q "/swapfile" /proc/swaps; then
     echo "Turning off the old swap..."
     sudo swapoff /swapfile
 fi
 
-# Safety check: Delete the old swap file if it exists
 if [[ -f /swapfile ]]; then
     echo "Deleting the old swap file..."
     sudo rm /swapfile
 fi
 
-# Create a new swap file
 echo "Creating a new swap file of size ${size}MB..."
 sudo dd if=/dev/zero of=/swapfile bs=1M count=$size
 
@@ -40,6 +42,10 @@ sudo mkswap /swapfile
 sudo swapon /swapfile
 
 echo "New swap file created and enabled successfully."
+
+# Add entry to /etc/fstab
+echo "Adding entry to /etc/fstab..."
+echo "/swapfile none swap defaults 0 0" | sudo tee -a /etc/fstab > /dev/null
 
 # Display the new swap information
 free -h
