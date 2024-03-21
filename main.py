@@ -6,7 +6,7 @@ def execute_distribution_scripts(distribution):
     # Define the paths to the distribution-specific scripts
     #fonts_script_path = f"./src/{distribution}/fonts.sh"
     browser_script_path = f"./src/{distribution}/browser.sh"
-    custom_zsh_script_path = f"./src/{distribution}/CustomZsh.sh"
+    custom_zsh_script_path = f"./src/{distribution}/CustomZsh.sh"               
     
     # Check if the scripts exist
     # if os.path.exists(fonts_script_path):

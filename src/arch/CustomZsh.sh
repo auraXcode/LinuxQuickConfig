@@ -1,6 +1,4 @@
-#customzsh
 #!/bin/bash
-
 # Function to check if a command is available
 command_exists() {
   command -v "$1" >/dev/null 2>&1
@@ -32,4 +30,11 @@ if [ "$SHELL" != "$(command -v zsh)" ]; then
   chsh -s "$(command -v zsh)"
 fi
 
-
+''' can change manually by runing
+chsh -s /bin/zsh username
+'''
+echo " DO IT MANUALLY
+ZSH_THEME="powerlevel10k/powerlevel10k"
+POWERLEVEL9K_MODE="awesome-patched"
+POWERLEVEL9K_FONT="JetBrainsMono"
+source ~/.zshrc"
