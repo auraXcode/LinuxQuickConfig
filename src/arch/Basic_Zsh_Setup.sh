@@ -33,7 +33,7 @@ fi
 ''' can change manually by runing
 chsh -s /bin/zsh username
 '''
-echo " DO IT MANUALLY
+echo " DO IT MANUALLY > add these lines in .zshrc
 ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_MODE="awesome-patched"
 POWERLEVEL9K_FONT="JetBrainsMono"

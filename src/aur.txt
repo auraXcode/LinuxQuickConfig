@@ -1,0 +1,5 @@
+floorp-bin
+chrome-bin
+obsidian-bin
+notion-bin
+spotify

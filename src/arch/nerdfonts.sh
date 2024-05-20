@@ -1,3 +1,5 @@
+
+#!/bin/bash
 '''required packages to continue'''
 # sudo pacman -S unzip
 '''installation location'''
@@ -13,8 +15,6 @@ wget -nc https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Hack.z
 wget -nc https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.zip
 wget -nc https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip
 echo "Downloades Done ✅"
-
-#!/bin/bash
 # Check if unzip is available
 if ! command -v unzip &>/dev/null; then
     echo "unzip is not installed. Installing..."
